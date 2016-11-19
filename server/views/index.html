@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <% if (env === "production") { %>
+        <link rel="stylesheet" href="/index/index.css">
+    <% } %>
+  </head>
+  <body>  
+    <h1><%= title %></h1>   
+   <%= session.userId %>  
+    <div class="first-note">
+    </div>
+    <p>Welcome to <%= title %>  </p>
+    <div id="draw"> 
+    </div>  
+     <script src="/index/bundle.js"></script>
+ <% if (env !== "production" && reload === true) { %>
+          <script src="/reload/reload.js"></script>
+    <% } %>
+  </body>
+</html>
